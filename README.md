@@ -154,6 +154,7 @@ Advantages:
 ## Unsupervised Learning
 - **PCA (Principal Component Analysis)**: Used for feature reduction but showed moderate performance. Principal Component Analysis : Principal component analysis is a technique for feature extraction — so it combines our input variables in a specific way, then we can drop the “least important” variables while still retaining the most valuable parts of all of the variables.
 We took 3 pca components and calculated accuracy.Here is the visual representation of the 3 components modelled through PCA.Although the accuracy was around 0.5,It performed better than Kmeans Clustering.
+![PCA](./pca.png)
 
 
 - **K-means Clustering**: Attempted to segment data into clusters; however, showed limited success.K-means is an unsupervised clustering algorithm designed to partition unlabelled data into a certain number (thats the “ K”) of distinct groupings. In other words, k-means finds observations that share important characteristics and classifies them together into clusters. A good clustering solution is one that finds clusters such that the observations within each cluster are more similar than the clusters themselves.
