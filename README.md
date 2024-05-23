@@ -1,73 +1,50 @@
 # Fake-news-detection
 ## Abstract
+Today, "Fake news" is often mentioned, but it encompasses a collection of manipulated media designed to capture attention with sensational aesthetics, presenting a fabricated reality. It's more deceptive and dangerous than many realize. Our goal is to develop a Fake News Prediction System using machine learning in Python, training it to distinguish between real and fake articles and to quantify its accuracy.
 
-Fake news is a manipulated mix of news and misinformation. This project aims to develop a machine learning model capable of distinguishing between real and fake news articles.
-
-### Problem Statement
-
-Build a model to determine the authenticity of a news article using machine learning techniques, with an emphasis on achieving high prediction accuracy.
-
-### Assumptions and Challenges
-
-- Converting textual data into a numerical format that machine learning algorithms can process.
-- Preprocessing textual data: removing punctuation, emojis, stop words, and unnecessary fillers.
-- Utilizing techniques such as stemming and lemmatization to normalize the text.
+### Formal Problem Description
+A program learns from experience (E) with respect to a task (T) and performance measure (P), if its performance on T, as measured by P, improves with E:
+- **Task (T)**: Predict whether provided data is real or fake.
+- **Experience (E)**: A large amount of textual data from several thousand news articles.
+- **Performance (P)**: Accuracy of predicting fake news correctly.
 
 ## Introduction
+With rampant online fake news and misinformation, discerning truth from fiction is challenging. Our model aims to accurately predict the likelihood of an article being fake to help restore public trust.
 
-With the prevalence of fake news, distinguishing between true and false information has become increasingly important. This project explores machine learning models to predict the likelihood of an article being fake.
+### Motivation
+Critiques following media attention, especially on platforms like Facebook which has begun to flag fake news, underscore the importance of our project.
 
-## Motivation
+### Solution Benefits
+- Enhances capabilities with textual data, including stemming and lemmatization.
+- Provides valuable learning in natural language processing (NLP), a new area for our previous work which was mainly numerical.
 
-The proliferation of fake news has significant implications. Platforms like Facebook have begun to implement measures to detect and flag fake content, making our project timely and relevant.
-
-## Benefits of the Solution
-
-- Hands-on experience with textual data preprocessing.
-- Learning and applying NLP techniques such as stemming and lemmatization.
-- Exploring various machine learning models to optimize prediction accuracy.
+### Use of Solution
+- Classifies articles as fake or real, potentially applicable to future content.
+- Emphasizes data preprocessing and model accuracy.
 
 ## Dataset Finalization
+We use labeled datasets with textual content from thousands of articles categorized as real or fake. Key datasets include:
+- **Dataset 1**: Labeled data focusing on US elections and Donald Trump-related fake articles. [Kaggle Dataset](https://www.kaggle.com/c/fake-news/data?select=train.csv)
+- **Dataset 2**: Real and fake news datasets. [Kaggle Dataset](https://www.kaggle.com/clmentbisaillon/fake-and-real-news-dataset)
+- **Dataset 3**: Articles from websites tagged by the BS Detector Chrome Extension. [Kaggle Dataset](https://www.kaggle.com/mrisdal/fake-news)
 
-We utilized several datasets from Kaggle, containing thousands of labeled news articles, classified as either real or fake. These datasets include varied features such as article text, titles, and authors which are crucial for training our models.
-
-### Data Preprocessing
-
-- Removal of stopwords using the NLTK library.
-- Application of stemming and lemmatization for text normalization.
-- Vectorization of text data to numerical data using TfidfVectorizer.
+## Data Preprocessing
+- **Stopwords Removal**: Using NLTK to eliminate irrelevant words.
+- **Stemming**: Applying the Porter stemming algorithm to reduce words to their root form.
+- **Lemmatization**: Transforming words to their base form using Wordnet.
 
 ## Supervised Learning Algorithms
-
-### Models Explored
-
-- **Naive Bayes:** Achieved an accuracy of 91.3% on sentiment analysis tasks.
-- **Logistic Regression:** Used for binary classification of news articles, achieving high accuracies.
-- **Random Forest:** Provided robust performance with an ensemble approach.
-- **Decision Tree:** Offered an intuitive model structure with competitive accuracies.
-- **Support Vector Machine (SVM):** Excelled in high-dimensional classification tasks.
-
-### Best Fit for Datasets
-
-- **Dataset 1:** Best modeled with Logistic Regression.
-- **Dataset 2:** Most accurately classified with SVM.
-- **Dataset 3:** Best results obtained with Decision Tree.
+- **Naive Bayes**: Achieved about 91.3% accuracy on Dataset 3.
+- **Logistic Regression**: Used for binary classification; high accuracy observed on Datasets 1 and 2.
+- **Random Forest**: Employed for its robustness and accuracy.
+- **Decision Tree**: Offers an intuitive approach and effective classification.
+- **Support Vector Machine (SVM)**: Best fits Dataset 2 with high accuracy due to its effectiveness in high-dimensional spaces.
 
 ## Unsupervised Learning
+- **PCA (Principal Component Analysis)**: Used for feature reduction but showed moderate performance.
+- **K-means Clustering**: Attempted to segment data into clusters; however, showed limited success.
 
-- **PCA (Principal Component Analysis):** Used for feature reduction, although it showed moderate performance.
-- **K-means Clustering:** Applied to partition data into clusters, but showed limited success.
+### Long Short-Term Memory (LSTM)
+- Applied to Datasets 2 and 3 with high accuracies. LSTMs manage data sequences effectively by retaining relevant information over time.
 
 ## Conclusion
-
-This project provides insights into handling and analyzing textual data, applying various machine learning algorithms, and improving fake news detection methods.
-
-## How to Use
-
-This model can classify new articles into real or fake, helping maintain the integrity of information spread online.
-
-## Future Work
-
-Continued exploration of advanced machine learning models and techniques to further enhance the accuracy and reliability of fake news detection.
-
-"""
