@@ -139,8 +139,15 @@ Advantages:
 - **Performance**: Achieved an accuracy of 99.6%, with 4231 true positives and 20 false positives.
 
 ### DATASET 1 BEST FIT : Logistic Regression 
+![Dataset 1](./dataset3.png)
+
+
 ### DATASET 2 BEST FIT : Support Vector Machine 
+![Dataset 2](./dataset2.png)
+
 ### DATASET 3 BEST FIT: Decision Tree
+![Dataset 3](./dataset1.png)
+
 
 
 
